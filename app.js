@@ -1,4 +1,4 @@
-// Book Constructor
+// Book Constructor - Creates Book object
 function Book(title, author, isbn) {
         this.title = title;
         this.author = author;
@@ -6,7 +6,7 @@ function Book(title, author, isbn) {
 
 }
 
-// UI Constructor
+// UI Constructor - Set of prototype methods - add to book, show alert, delete book.
 function UI() {
 
 }
@@ -72,12 +72,12 @@ UI.prototype.clearFields = function () {
 document.getElementById('book-form').addEventListener('submit',
         function (e) {
 
-                // Get form values
+                // Get form entry values
                 const title = document.getElementById('title').value,
                         author = document.getElementById('author').value,
                         isbn = document.getElementById('isbn').value
 
-                // Instantiate book
+                // Instantiate book - create a book object
                 const book = new Book(title, author, isbn);
 
                 // Instantiate UI
